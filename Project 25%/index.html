@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="imageslider.css">
+    <link rel="icon" type="image/x-icon" href="Images/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Project for Rujal,Bipin,Pratik,Srijan</title>
+    <style>
+        .carousel-caption {
+            position: left;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .text-start {
+            text-align: left;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header a:hover {
+            color: #ccc;
+        }
+
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        nav a:hover {
+            color: #666;
+        }
+
+        .sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.sidebar .sidebar-header {
+  background-color: #4CAF50;
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: #555;
+  color: white;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+        main {
+            padding: 20px;
+        }
+
+        main h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            text-align: justify;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ccc;
+        }
+
+     
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <button class="sidebar-toggle" onclick="toggleSidebar()">
+                <i class="fa fa-bars"></i>
+            </button>
+            </div>
+            <div id="sidebar" class="sidebar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="https://www.w3schools.com">w3 schools</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">Mozilla Developer Network</a></li>
+                    <li><a href="https://www.freecodecamp.org">Free Code Camp</a></li>
+                </ul>
+            </div>
+            <div class="image-slider">
+                <img src="Images/Pashupatinath.jpg" alt="Error!">
+                <img src="Images/Boudhanath1.jpg" alt="Error!" >
+                <img src="Images/Basantapur.jpg" alt="Error!">
+                <img src="Images/Singhadurbar.jpg" alt="Error!" >
+                <span class="image_text"><h1>Kathmandu(KASTAMANDAP)</h1></span>
+            </div>
+
+    </header>
+  
+
+    <nav class="bg-light py-3">
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.communityhomestay.com/homestays?gad_source=1&gclid=Cj0KCQjwq86wBhDiARIsAJhuphnMEs_oXxOoQQ5jhaPpA0ML9icA3oTH02E-gR2iwwwSFy3eoZ1ilyUaAuCqEALw_wcB"
+                        class="nav-link">Plan Your Visit</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bookanevent.html" class="nav-link">Book an Event</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contactus.html" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="text-center mb-4">KATHMANDU THE CITY OF GODS</h1>
+                    <p>
+                        Kathmandu, the capital city of Nepal, holds a captivating history that spans millennia. Originally
+                        settled by the Newar people, renowned for their artistic prowess, Kathmandu served as a
+                        bustling trading hub along the ancient routes between India and Tibet. Over the centuries, it
+                        witnessed the rise and fall of various dynasties, including the Licchavi, Malla, and Shah, each
+                        leaving an indelible mark on the city's landscape and culture. Today, Kathmandu stands as a
+                        testament to this rich heritage, with its UNESCO-listed Durbar Squares adorned with intricately
+                        carved temples and palaces, showcasing the architectural marvels of bygone eras. Amidst the city's
+                        bustling streets, one can immerse in a tapestry of diverse cultures, languages, and religions,
+                        with Hinduism and Buddhism prevailing as dominant faiths. Festivals, rituals, and ceremonies
+                        punctuate the city's calendar, offering a glimpse into its vibrant cultural tapestry.
+                    </p>
+                    <p>
+                        Kathmandu's uniqueness lies in its blend of diverse cultures, showcased through its vibrant
+                        tapestry of Hinduism, Buddhism, and other ethnic traditions, all nestled amidst a backdrop of
+                        awe-inspiring architectural wonders like the ancient temples and palaces that adorn its streets.
+                        Serving as the gateway to the Himalayas, Kathmandu offers unparalleled opportunities for
+                        adventure seekers while retaining its status as a spiritual sanctuary with revered sites such as
+                        Swayambhunath and Pashupatinath. Its bustling streets, filled with the aromas of traditional
+                        Nepali cuisine and the vibrant colors of bustling markets, reflect a rich heritage and a vibrant
+                        present, where every festival and celebration adds to the city's timeless allure, making Kathmandu
+                        a destination unlike any other.
+                    </p>
+                    <p>
+                        Despite rapid modernization, Kathmandu has managed to retain its ancient charm, with
+                        traditional markets, artisan workshops, and Newar eateries dotting its urban landscape. Today,
+                        Kathmandu stands as a dynamic urban center, pulsating with life, yet deeply rooted in its
+                        timeless heritage, attracting travelers from across the globe seeking an authentic cultural
+                        experience in the heart of the Himalayas.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase">Search</h5>
+                            <form class="form-inline">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary">Go</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase">Testimonials</h5>
+                            <p>
+                                "Kathmandu is a city that has something for everyone. From its rich cultural heritage
+                                to its bustling markets, it's a place that will leave you with memories to last a
+                                lifetime."
+                            </p>
+                            <p>
+                                - John Doe, Traveler
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase">Quick Links</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="bookanevent.html">Book an Event</a></li>
+                                <li><a href="aboutus.html">About Us</a></li>
+                                <li><a href="contactus.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            Developed By:Team Shark(Rujal,Bipin,Pratik,Srijan)<br>
+            Reference: <a href="https://en.wikipedia.org/wiki/Kathmandu">THE KASTAMANDAP</a>
+            <br><br>
+            <a href="https://www.niagaracollegetoronto.ca/">Niagara College Toronto</a>
+        </div>
+        <script>
+            let sidebarShown = false;
+            const sidebar = document.querySelector('.sidebar');
+            const toggleButton = document.querySelector('.sidebar-toggle');
+        
+            function toggleSidebar() {
+                if (!sidebarShown) {
+                    sidebar.classList.add('show');
+                } else {
+                    sidebar.classList.remove('show');
+                }
+                sidebarShown = !sidebarShown;
+            }
+        
+      
+            document.body.addEventListener('click', function(event) {
+                if (!sidebar.contains(event.target) && event.target !== toggleButton) {
+
+                    if (sidebarShown) {
+                        sidebar.classList.remove('show');
+                        sidebarShown = false;
+                    }
+                }
+            });
+        </script>
+        
+    </footer>
+    </div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+</html>
